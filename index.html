@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>chinyan · 公开页面</title>
+<meta name="description" content="chinyan 的各个项目需要公网访问的页面。">
+<!--
+  整个站点的首页，也是唯一的索引。
+
+  ## 加一个新页面
+    1. 建目录放 index.html，比如  某项目/某页面/index.html
+       访问地址就是  https://chin-all.github.io/某项目/某页面/
+    2. 在下面照着已有的条目复制一条 <li>；新项目就复制整组 <section>
+  不需要任何构建工具，改完 commit + push，一两分钟后生效。
+
+  ## 为什么全部手写、样式内联、不引外部资源
+  这里挂的是隐私政策、支持页这类「给审核员和用户看」的页面。
+  任何一个 CDN 挂掉导致白屏，都可能直接变成一次审核被拒，
+  而纯静态 HTML 几乎不会坏。
+
+  ## 为什么每个页面用「目录/index.html」而不是「xxx.html」
+  地址会是 /momo/privacy/ 而不是 /momo/privacy.html。
+  这种地址填进 App Store Connect 之后，哪天想换实现方式也不用改链接。
+-->
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", Roboto, sans-serif;
+    background: #fafafa; color: #222; line-height: 1.6; padding: 56px 20px;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; }
+  h1 { font-size: 22px; font-weight: 600; margin-bottom: 6px; }
+  .sub { color: #888; font-size: 14px; margin-bottom: 32px; }
+  section { margin-bottom: 28px; }
+  h2 { font-size: 13px; font-weight: 600; color: #999; letter-spacing: .06em; margin: 0 0 10px 2px; }
+  ul { list-style: none; background: #fff; border: 1px solid #eee; border-radius: 10px; overflow: hidden; }
+  li + li { border-top: 1px solid #f0f0f0; }
+  a.item { display: flex; justify-content: space-between; align-items: center; gap: 12px;
+           padding: 14px 18px; color: inherit; text-decoration: none; }
+  a.item:hover { background: #f6f8fa; }
+  .title { font-size: 15px; }
+  .desc { font-size: 13px; color: #888; }
+  .arrow { color: #bbb; font-size: 18px; }
+  footer { margin-top: 48px; font-size: 13px; color: #aaa; }
+  footer a { color: #888; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>公开页面</h1>
+  <p class="sub">各个项目需要公网访问的页面都放在这里。</p>
+
+  <section>
+    <h2>momo · 陪伴型 AI 桌宠</h2>
+    <ul>
+      <li>
+        <a class="item" href="momo/privacy/">
+          <div><div class="title">隐私政策 · Privacy Policy</div>
+               <div class="desc">摄像头画面永不离开设备</div></div>
+          <span class="arrow">›</span>
+        </a>
+      </li>
+      <li>
+        <a class="item" href="momo/support/">
+          <div><div class="title">支持 · Support</div>
+               <div class="desc">常见问题与联系方式</div></div>
+          <span class="arrow">›</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 新项目照着上面那一组 <section> 复制 -->
+
+  <footer>
+    <a href="https://github.com/chin-all">github.com/chin-all</a>
+  </footer>
+</div>
+</body>
+</html>

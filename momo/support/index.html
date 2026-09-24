@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>momo 支持 | Support</title>
+<!--
+  App Store Connect 的「支持 URL」必填，这一页就是它。
+  审核员会打开它，所以：内联样式、不引外部资源、不写 App 里没有的功能。
+  改设置里的菜单名时，回来同步这一页的路径描述。
+-->
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", Roboto, sans-serif;
+    background: #fafafa; color: #333; line-height: 1.7; padding: 32px 20px;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; background: #fff; padding: 36px 30px;
+          border: 1px solid #eee; border-radius: 10px; }
+  nav { margin-bottom: 24px; font-size: 14px; }
+  nav button { border: 1px solid #ddd; background: #fff; padding: 4px 14px; border-radius: 6px;
+               cursor: pointer; font-size: 14px; margin-right: 6px; }
+  nav button.on { background: #222; color: #fff; border-color: #222; }
+  h1 { font-size: 24px; margin-bottom: 4px; }
+  .sub { color: #888; font-size: 14px; margin-bottom: 28px; }
+  h2 { font-size: 17px; margin: 28px 0 8px; }
+  p { margin-bottom: 10px; }
+  .contact { font-size: 17px; margin: 8px 0 4px; }
+  a { color: #0a66c2; }
+  .back { margin-top: 36px; font-size: 13px; color: #999; }
+  .lang { display: none; }
+  .lang.on { display: block; }
+  @media (max-width: 480px) { .wrap { padding: 26px 18px; } h1 { font-size: 21px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <button id="b-zh" class="on" onclick="show('zh')">中文</button>
+    <button id="b-en" onclick="show('en')">English</button>
+  </nav>
+
+  <div id="zh" class="lang on">
+    <h1>momo 支持</h1>
+    <p class="sub">一只住在闲置 iPhone / iPad 里的陪伴型桌宠。</p>
+
+    <h2>遇到问题、或者它说了不合适的话</h2>
+    <p>写邮件给我，通常几天内回复：</p>
+    <p class="contact"><a href="mailto:chiny.bf@gmail.com">chiny.bf@gmail.com</a></p>
+    <p>App 里也可以直接发：设置 → 高级设置与支持 → 反馈。那样邮件会自动带上版本号和机型，不含任何对话内容。</p>
+
+    <h2>不配置 API Key 能用吗？</h2>
+    <p>能。它会眨眼、看你、随时间犯困或来精神，也会用自带的台词回应你。只是聊不深——想让它真正听懂你，需要接一个大模型服务。</p>
+
+    <h2>怎么接大模型？</h2>
+    <p>设置 → AI 与记忆 → AI 服务，选一家服务商（OpenAI、Anthropic，或者局域网里自己跑的 Ollama），填入你自己的 API Key。费用由你和服务商结算，momo 不收费、不抽成、不中转。</p>
+
+    <h2>它为什么突然不说话了？</h2>
+    <p>先看屏幕上有没有一行小字提示，比如 Key 无效或余额不足。其次，它夜里本来就比较安静。设置 → 高级设置与支持 → 自检 可以看到每一路传感器和模型连接的实时状态。</p>
+
+    <h2>它会自己开口说话吗？</h2>
+    <p>默认不会。设置 → 声音与互动 →「主动开口」打开后，你在的时候它大约一到两小时会主动找你说一句，夜里不说，你一直不理它它会自己变少。</p>
+
+    <h2>「自然音色」是什么？</h2>
+    <p>一个在设备上运行的语音模型，比系统音色自然得多。它不随 App 一起下载，需要时在 设置 → 声音与互动 里下载一次（约 200 MB，建议连 Wi-Fi）。</p>
+
+    <h2>隐私</h2>
+    <p>摄像头画面永不离开设备。完整说明见 <a href="../privacy/">隐私政策</a>。</p>
+
+    <p class="back"><a href="/">← 全部公开页面</a></p>
+  </div>
+
+  <div id="en" class="lang">
+    <h1>momo Support</h1>
+    <p class="sub">A companion desk pet that lives in a spare iPhone or iPad.</p>
+
+    <h2>Something's wrong, or it said something it shouldn't have</h2>
+    <p>Email me. I usually reply within a few days:</p>
+    <p class="contact"><a href="mailto:chiny.bf@gmail.com">chiny.bf@gmail.com</a></p>
+    <p>You can also send it from inside the app: Settings → Advanced &amp; Support → Feedback. That email pre-fills the version and device model, with no conversation content.</p>
+
+    <h2>Does it work without an API key?</h2>
+    <p>Yes. It blinks, watches you, gets sleepy or perks up over the day, and answers with its own built-in lines. It just can't go deep. To have it really understand you, connect a language model.</p>
+
+    <h2>How do I connect a language model?</h2>
+    <p>Settings → AI &amp; Memory → AI providers. Pick a provider (OpenAI, Anthropic, or an Ollama server on your own network) and enter your own API key. You pay the provider directly; momo charges nothing, takes no cut, and never proxies your conversations.</p>
+
+    <h2>Why did it stop talking?</h2>
+    <p>First check for a small line of text on screen, such as an invalid key or no credit left. It's also naturally quieter at night. Settings → Advanced &amp; Support → Self-check shows the live status of every sensor and the model connection.</p>
+
+    <h2>Will it start talking on its own?</h2>
+    <p>Not by default. Turn on Settings → Voice &amp; Interaction → "Speak on its own" and it will occasionally start a conversation, roughly once every one to two hours while you're around, never at night, and less often if you keep ignoring it.</p>
+
+    <h2>What is the "natural voice"?</h2>
+    <p>An on-device speech model that sounds far more natural than the system voice. It isn't bundled with the app; download it once from Settings → Voice &amp; Interaction when you want it (about 200 MB, Wi-Fi recommended).</p>
+
+    <h2>Privacy</h2>
+    <p>Camera frames never leave your device. Full details in the <a href="../privacy/">Privacy Policy</a>.</p>
+
+    <p class="back"><a href="/">← All public pages</a></p>
+  </div>
+</div>
+<script>
+  // 按浏览器语言选默认显示哪一份：审核员多半是英文环境，
+  // 让他一打开就看到英文，比让他去找切换按钮稳妥。
+  function show(l) {
+    for (const k of ['zh', 'en']) {
+      document.getElementById(k).classList.toggle('on', k === l);
+      document.getElementById('b-' + k).classList.toggle('on', k === l);
+    }
+    document.documentElement.lang = l === 'zh' ? 'zh-CN' : 'en';
+  }
+  if (!(navigator.language || '').toLowerCase().startsWith('zh')) show('en');
+</script>
+</body>
+</html>
